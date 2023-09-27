@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.product h3 {
+    margin: 5px 0;
+}
+
+
+.cart-widget {
+    display: flex;
+    align-items: center;
+}
+
+.cart-notification {
+    background-color: #ff6b6b;
+    color: white;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
