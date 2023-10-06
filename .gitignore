@@ -1,3 +1,31 @@
+.CFUserTextEncoding
+.DS_Store
+.bash_history
+.bash_sessions/
+.cups/
+.gitconfig
+.i2pd/
+.lesshst
+.node_repl_history
+.npm-global/
+.npm/
+.npmrc
+.viminfo
+.vscode/
+.zprofile
+.zsh_history
+.zsh_sessions/
+.zshrc
+Creative Cloud Files/
+Desktop/
+Documents/
+Downloads/
 Library/
+Movies/
+Music/
+Pictures/
+Public/
+golden.jpg
+sassLibrary/
 
 

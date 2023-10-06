@@ -38,3 +38,63 @@
     border-radius: 50%;
     margin-left: 5px;
 }
+
+.checkout {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .checkout h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .checkout ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .checkout ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .checkout p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .checkout a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .checkout a:hover {
+    text-decoration: underline;
+  }
+  
+  .checkout button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .checkout button:hover {
+    background-color: #0056b3;
+  }

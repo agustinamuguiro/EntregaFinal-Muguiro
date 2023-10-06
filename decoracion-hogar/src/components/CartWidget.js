@@ -1,6 +1,8 @@
 import React from 'react';
+import { useCart } from './CartContext';
 
-function CartWidget({ cartItems }) {
+function CartWidget() {
+  const { cartItems } = useCart();
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (

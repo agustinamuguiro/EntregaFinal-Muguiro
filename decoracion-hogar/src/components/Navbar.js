@@ -17,6 +17,7 @@ function Navbar() {
           {category.name}
         </Link>
       ))}
+      <Link to="/checkout">Checkout</Link>
     </nav>
   );
 }
