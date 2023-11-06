@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer';
 import ProductDetail from './components/ProductDetail';
-import Checkout from './components/Checkout'; 
-import { CartContextProvider } from './components/CartContext';
+import Checkout from './components/Checkout';
+import OrderForm from './components/OrderForm';
+import { CartContextProvider } from './CartContext';
 
 const products = [
   {
@@ -89,23 +90,28 @@ const products = [
   },
 ];
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div className="App">
         <CartContextProvider>
           <Navbar />
           <Switch>
-            <Route exact path="/" render={(props) => <ItemListContainer {...props} products={products} />} />
-            <Route path="/category/:categoryId" render={(props) => <ItemListContainer {...props} products={products} />} />
+            <Route exact path="/" component={ItemListContainer} />
+            <Route path="/category/:categoryId" component={ItemListContainer} />
             <Route path="/item/:id" component={ProductDetail} />
-            <Route path="/checkout" component={Checkout} /> {/* Agrega la ruta para el componente Checkout */}
+            <Route path="/checkout" component={Checkout} />
+            <Route path="/order-form" component={OrderForm} />
             <Route component={() => <div>Página no encontrada</div>} />
           </Switch>
         </CartContextProvider>
       </div>
     </Router>
   );
-}
+};
 
 export default App;
+
+
+
+

@@ -1,20 +1,22 @@
 import React, { useContext, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom'; // Importa useHistory para redirigir al usuario
+import { Link, useHistory } from 'react-router-dom';
 import { CartContext } from './CartContext';
 
 function Checkout() {
-  const { cartItems } = useContext(CartContext);
-  const [isPurchaseComplete, setPurchaseComplete] = useState(false); 
-  const history = useHistory(); 
+  const { cartItems, clearCart } = useContext(CartContext);
+  const [isPurchaseComplete, setPurchaseComplete] = useState(false);
+  const history = useHistory();
 
-  const totalAmount = cartItems.reduce((total, item) => total + item.importe * item.quantity, 0);
-
+  const totalAmount = cartItems.reduce((total, item) => total + item.importe * item.cantidad, 0);
 
   const handlePurchaseComplete = () => {
-   
+
     setPurchaseComplete(true);
   };
 
+  const handleClearCart = () => {
+    clearCart();
+  };
 
   if (isPurchaseComplete) {
     return (
@@ -31,11 +33,12 @@ function Checkout() {
       <ul>
         {cartItems.map((item) => (
           <li key={item.codigo}>
-            {item.nombre} x {item.quantity} - ${item.importe * item.quantity}
+            {item.nombre} x {item.cantidad} - ${item.importe * item.cantidad}
           </li>
         ))}
       </ul>
       <p>Total: ${totalAmount}</p>
+      <button onClick={handleClearCart}>Vaciar Carrito</button>
       <Link to="/">Seguir comprando</Link>
       <button onClick={handlePurchaseComplete}>Finalizar Compra</button>
     </div>

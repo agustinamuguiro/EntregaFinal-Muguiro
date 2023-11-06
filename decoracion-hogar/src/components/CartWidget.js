@@ -2,8 +2,8 @@ import React from 'react';
 import { useCart } from './CartContext';
 
 function CartWidget() {
-  const { cartItems } = useCart();
-  const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+  const { state } = useCart(); 
+  const totalItems = state.cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <div className="cart-widget">
